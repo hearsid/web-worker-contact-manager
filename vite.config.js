@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite';
 
-export default defineConfig({
-
-  // Configuration options
-
-});
+export default {
+  build: {
+    rollupOptions: {
+      input: '/src/main.ts',
+    },
+  },
+}

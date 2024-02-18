@@ -13,6 +13,10 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.70.0",
+    "typescript": "^5.3.3",
     "vite": "^5.0.12"
+  },
+  "dependencies": {
+    "comlink": "^4.4.1"
   }
 }
