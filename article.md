@@ -1,25 +1,13 @@
 Title: Enhancing Performance with Web Workers: A Comparative Study
-Introduction
-Briefly introduce the concept of web workers and their role in improving web application performance.
-Mention the purpose of the article, which is to compare the performance of a web application with and without web workers.
-What are Web Workers?
-Explain what web workers are and how they work.
-Discuss the benefits of using web workers, such as offloading heavy computations to a separate thread to prevent blocking the main thread.
-Setting Up the Experiment
-Describe the web application you'll be using for the comparison. It could be a contact manager application similar to the one used in your previous article.
-Explain how you'll implement web workers in the application.
-Performance Without Web Workers
-Run the application without web workers and record the performance metrics.
-Discuss the results and any performance issues encountered.
-Implementing Web Workers
-Describe the process of implementing web workers in the application.
-Discuss any challenges encountered and how you overcame them.
-Performance With Web Workers
-Run the application with web workers and record the performance metrics.
-Discuss the results and any improvements in performance.
-Comparison and Analysis
-Compare the performance metrics of the application with and without web workers.
-Analyze the results and discuss whether using web workers improved the performance.
-Conclusion
-Summarize the findings of the experiment.
-Discuss the potential benefits of using web workers in web applications, based on the results of the experiment.
+
+Target Audience: Software Developers/ Technical Managers who want to compare performance metrics of a web application with and without Web Workers to get a better perspective about how Web Workers can enhance the performance of an upcoming project.
+
+Introduction Web Workers allow us to run JavaScript code in the background, separate from the main thread. This means we can perform complex tasks without freezing the user interface.
+
+This post is going to compare the performance difference of a web application with and without Web Workers in terms of:
+
+The most significant metrics in the case of Web Workers would be:
+1. Scripting Time: Web Workers run scripts in the background, separate from the main execution thread of a web application. Therefore, the time spent in the scripting phase can be significantly reduced when using Web Workers, especially for resource-intensive tasks.
+2. Time To Interactive (TTI): Web Workers can improve the time it takes for a page to become fully interactive by offloading heavy computations to a separate thread. This means the main thread can remain free to respond to user input, potentially reducing the TTI.
+3. Heap Size: Web Workers have their own global scope, separate from the main thread. Therefore, they can help manage memory more efficiently and potentially reduce the heap size, especially for large applications or those that perform complex tasks.
+4. Rendering Time: By offloading heavy computations to a separate thread, Web Workers can help ensure that the main thread remains free to render the UI. This can potentially reduce the time spent in the rendering phase.
