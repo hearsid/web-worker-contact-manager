@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Manager</title>
+</head>
+<body>
+  <div id="app">
+    <div class="App">
+      <div class="layout">
+        <contact-manager-header></contact-manager-header>
+        <div class="main-container container">
+          <div class="contacts-page">
+            <h2 class="page-header text-center">Contacts (<span id="contacts-length"></span>)</h2>
+            <a href='/add' class="btn btn-lg btn-outline">Add Contact</a>
+            <div class="media-list contacts-container">
+                      <!-- Contacts will be inserted here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+  <script src="./src/header.js"></script>
+  <script src="./src/contact.component.js"></script>
+
+</body>
+
+</html>
