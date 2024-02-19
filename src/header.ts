@@ -40,7 +40,7 @@ class Header extends HTMLElement {
                         <header class="bs-header">
                         <div class="container">
                             <h1>Contact Manager</h1>
-                            <p>Simple example application using Web Worker</p>
+                            <p>Web Worker- Simple Example</p>
                         </div>
                         </header>
                     </div>

@@ -5,15 +5,36 @@ import type { IContact } from './contact.model';
 const worker = wrap<typeof import('./contact.webworker')>(new Worker(new URL('./contact.webworker.ts', import.meta.url), { type: 'module' }));
 
 async function main() {
-  const contacts: IContact[] = await worker.generateContacts(10000);
+  const loader = document.querySelector('#loader') as any;
+  if (loader) {
+    loader.style.display = 'flex';
+  }
+
+  const contacts: IContact[] = await worker.generateContacts(1000);
   console.log(contacts);
   var contactsApp = new Contacts(contacts);
   contactsApp.updateLength();
   contactsApp.createContacts();
+
+  // Hide loader
+  if (loader) {
+    loader.style.display = 'none';
+  }
 }
 
 main();
 
+
+
+const toggleWorker = document.querySelector('#toggleWorker') as HTMLInputElement;
+
+toggleWorker.addEventListener('change', (event) => {
+    if (event.target.checked) {
+        // Enable web worker
+    } else {
+        // Disable web worker
+    }
+});
 class Contacts {
     contacts: any;
     constructor(contacts: any) {
